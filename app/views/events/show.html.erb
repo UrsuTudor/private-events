@@ -1,0 +1,9 @@
+<ul>
+  <li>Event organizer: <%= @event.creator.email %></li>
+  <li>Event name: <%= @event.name %></li>
+  <li>Event location: <%= @event.location %></li>
+  <li>Event date: <%= @event.date %></li>
+  <li>Event time: <%= @event.time %></li>
+</ul>
+
+<%= link_to 'Home', root_path%>

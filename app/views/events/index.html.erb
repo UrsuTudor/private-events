@@ -1,0 +1,17 @@
+<h1>Planned Events</h1>
+
+<ul>
+  <% @events.each do |event|%>
+    <li>
+      <%= link_to event.name, event%>
+    </li>
+  <% end%>
+</ul>
+
+<%= link_to 'Your Events', current_user%> <p></p>
+<%= link_to 'Post Event', new_event_path%><p></p>
+
+<% if !user_signed_in? %>
+  <%= button_to "Log In", user_session_path %>
+<% end %>
+<%= button_to "Log Out", destroy_user_session_path, method: :delete  %>
